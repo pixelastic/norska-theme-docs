@@ -1,0 +1,13 @@
+/* Default theme colors */
+.theme-header {
+  @apply bg-green-1;
+}
+.theme-navigation-link:hover {
+  @apply green-5;
+}
+.theme-navigation-link-active {
+  @apply border-green-4;
+}
+.theme-title {
+  @apply border-green-5;
+}

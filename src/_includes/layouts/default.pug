@@ -14,9 +14,9 @@ html(lang='en')
             ul.mb-1
               each entry in part.links
                 - const parts = data.themeMethods.parseNavigationLink(entry, { isCurrentPage, link })
-                - const cssClasses = parts.isActive ? 'DocSearch-active border-green-4 bold' : 'border-transparent hover_border-gray-4';
+                - const cssClasses = parts.isActive ? 'DocSearch-active theme-navigation-link-active bold' : 'border-transparent hover_border-gray-4';
                 li
-                  a.text-2.block.ml-01.my-01.pl-02.gray-7.hover_green-5.border-l-01(href=parts.relativeLink title=parts.title class=cssClasses)=parts.title
+                  a.theme-navigation-link.text-2.block.ml-01.my-01.pl-02.gray-7.border-l-01(href=parts.relativeLink title=parts.title class=cssClasses)=parts.title
 
       .flex-grow
         if data.theme.isDefaultInstall
@@ -24,7 +24,7 @@ html(lang='en')
             .prose!=markdown(data.theme.instructions)
 
         .DocSearch-content.bg-white.border-001.border-gray-4.p-3
-          h1.gray-9.text-6.border-b-01.border-green-5=meta.title
+          h1.theme-title.gray-9.text-6.border-b-01=meta.title
           .prose.prose-xl.pt-5
             block content
 

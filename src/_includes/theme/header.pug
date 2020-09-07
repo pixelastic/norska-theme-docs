@@ -1,12 +1,11 @@
-.fixed.w-100p.top-0.z-9.h-8.bg-green-1.border-b-001.border-gray-4
+.theme-header.fixed.w-100p.top-0.z-9.h-8.border-b-001.border-gray-4
   .container.mx-auto.h-100p.flex.items-center.px-1.md_px-2
     input.hidden.if(type="checkbox" id="menu_checkbox")
 
     //- Title
     .w-25p.flex.items-center.justify-center
-      a.text-7(href=url.pathToRoot) 
-        .green.bold.inline >
-        .inline-block.ml-01 firost
+      - const headerLogo = data.themeMethods.headerLogo({ include })
+      a(href=url.pathToRoot)!=headerLogo
 
     .flex.flex-grow
       //- Search
