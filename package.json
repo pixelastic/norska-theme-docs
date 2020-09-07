@@ -1,0 +1,25 @@
+{
+  "author": "Pixelastic <tim@pixelastic.com>",
+  "dependencies": {
+    "aberlaas": "1.13.0",
+    "firost": "2.0.5",
+    "golgoth": "1.4.0"
+  },
+  "description": "Norska documentation theme",
+  "files": ["main.js", "lib/*.js", "src/"],
+  "homepage": "https://github.com/pixelastic/norska/",
+  "license": "MIT",
+  "main": "./main.js",
+  "name": "norska-theme-docs",
+  "repository": "https://github.com/pixelastic/norska/modules/norska-theme-docs",
+  "scripts": {
+    "ci": "./scripts/ci",
+    "husky:precommit": "./scripts/husky-precommit",
+    "lint": "./scripts/lint",
+    "lint:fix": "./scripts/lint-fix",
+    "release": "./scripts/release",
+    "test": "./scripts/test",
+    "test:watch": "./scripts/test-watch"
+  },
+  "version": "1.0.5"
+}
