@@ -7,23 +7,25 @@ Create a `./src/_data/theme.json` file with content similar to this one to
 update the navigation links:
 
 ```json
-[
-  {
-    "name": "Overview",
-    "links": [
-      {
-        "title": "Installation",
-        "href": "install"
-      },
-      {
-        "title": "Quick tour",
-        "href": "tutorial"
-      }
-    ]
-  },
-  {
-    "name": "Documentation",
-    "links": ["copy", "emptyDir"]
-  }
-]
+{
+  "navigation": [
+    {
+      "name": "Overview",
+      "links": [
+        {
+          "title": "Installation",
+          "href": "install"
+        },
+        {
+          "title": "Quick tour",
+          "href": "tutorial"
+        }
+      ]
+    },
+    {
+      "name": "Documentation",
+      "links": ["copy", "emptyDir"]
+    }
+  ]
+}
 ```
