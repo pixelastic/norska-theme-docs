@@ -29,14 +29,20 @@ module.exports = {
    * Expect include
    * @returns {string} HTML representation of the logo
    **/
-  headerLogo(dependencyInjection = {}) {
-    const { include } = dependencyInjection;
-    const logoPath = '_includes/logo.pug';
+  headerLogos(dependencyInjection = {}) {
+    const { include, _ } = dependencyInjection;
+    const filepaths = {
+      default: '_includes/logo.pug',
+      md: '_includes/logo_md.pug',
+      lg: '_includes/logo_lg.pug',
+    };
 
-    try {
-      return include(logoPath);
-    } catch (err) {
-      return logoPath;
-    }
+    return _.mapValues(filepaths, (filepath) => {
+      try {
+        return include(filepath);
+      } catch (_err) {
+        return filepath;
+      }
+    });
   },
 };
