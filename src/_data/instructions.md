@@ -26,6 +26,10 @@ update the navigation links:
       "name": "Documentation",
       "links": ["copy", "emptyDir"]
     }
-  ]
+  ],
+  "docSearch": {
+    apiKey: 'yourApiKey',
+    indexName: 'yourIndexName',
+  }
 }
 ```

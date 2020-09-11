@@ -3,9 +3,10 @@ include ../theme/mixins.pug
 doctype html
 html(lang='en')
   +norska_head
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@alpha")
 
   body.bg-gray-1.lato
-    input.hidden.if(type="checkbox" id="menu_checkbox")
+    input#menu_checkbox.hidden.if(type="checkbox")
     include ../theme/header.pug
     .container.mx-auto.flex.mt-10.pb-3.px-01
       //- Sidebar
@@ -34,4 +35,13 @@ html(lang='en')
     include ../theme/footer.pug
 
   +norska_scripts
+    if data.theme.docSearch
+      script(src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha")
+      script!=`window.DOCSEARCH_CONFIG = ${JSON.stringify(data.theme.docSearch)}`
+      script
+        |docsearch({
+        |  apiKey: DOCSEARCH_CONFIG.apiKey,
+        |  indexName: DOCSEARCH_CONFIG.indexName,
+        |  container: '#DocSearchContainer'
+        |});
 
