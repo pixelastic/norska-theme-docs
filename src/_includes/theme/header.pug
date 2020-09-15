@@ -29,6 +29,8 @@
             +svg_close.fill-current.w-2.h-2()
 
         //- Icons
-        .hidden.lg_flex
-          a.px-02.py-01.gray-5.hover_gray-7(href="https://github.com/pixelastic/firost")
-            +svg_github.fill-current.w-4.h-4()
+        .hidden.lg_flex.items-center
+          a.px-02.gray-6.text-3.lh-1(href=data.package.repository)=`v${data.package.version}`
+          if data.package.github
+            a.px-02.py-01.gray-5.hover_gray-7(href=data.package.github)
+              +svg_github.fill-current.w-4.h-4()

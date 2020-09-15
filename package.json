@@ -1,7 +1,8 @@
 {
   "author": "Pixelastic <tim@pixelastic.com>",
   "dependencies": {
-    "firost": "2.0.5"
+    "firost": "2.0.5",
+    "parse-github-repo-url": "1.4.1"
   },
   "devDependencies": {
     "aberlaas": "1.13.2",
