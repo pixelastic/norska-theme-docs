@@ -20,6 +20,14 @@ html(lang='en')
                 - const cssClasses = parts.isActive ? 'DocSearch-active theme-navigation-link-active bold' : 'border-transparent hover_border-gray-4';
                 li.text-3
                   a.theme-navigation-link.block.ml-01.my-01.pl-02.gray-7.border-l-01(href=parts.relativeLink title=parts.title class=cssClasses)=parts.title
+                  if entry.links
+                    ul.mb-1.ml-1
+                      each subEntry in entry.links
+                        - const subParts = data.themeMethods.parseNavigationLink(subEntry, { isCurrentPage, link })
+                        - const cssClasses = subParts.isActive ? 'DocSearch-active theme-navigation-link-active bold' : 'border-transparent hover_border-gray-4';
+                        li.text-2
+                          a.theme-navigation-link.block.ml-01.my-01.pl-02.gray-7.border-l-01(href=subParts.relativeLink title=subParts.title class=cssClasses)=subParts.title
+
 
       //- Content
       .flex-grow.min-w-0
