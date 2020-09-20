@@ -42,14 +42,14 @@ html(lang='en')
 
     include ../theme/footer.pug
 
-  +norska_scripts
-    if data.theme.docSearch
-      script(src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha")
-      script!=`window.DOCSEARCH_CONFIG = ${JSON.stringify(data.theme.docSearch)}`
-      script
-        |docsearch({
-        |  apiKey: DOCSEARCH_CONFIG.apiKey,
-        |  indexName: DOCSEARCH_CONFIG.indexName,
-        |  container: '#DocSearchContainer'
-        |});
+    +norska_scripts
+      if data.theme.docSearch
+        script(src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha")
+        script!=`window.DOCSEARCH_CONFIG = ${JSON.stringify(data.theme.docSearch)}`
+        script
+          |docsearch({
+          |  apiKey: DOCSEARCH_CONFIG.apiKey,
+          |  indexName: DOCSEARCH_CONFIG.indexName,
+          |  container: '#DocSearchContainer'
+          |});
 

@@ -1,0 +1,8 @@
+.prose {
+  a {
+    @apply blue underline underline-transparent transition-colors;
+    &:hover {
+      @apply underline-current-color;
+    }
+  }
+}

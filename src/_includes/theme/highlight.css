@@ -1,10 +1,4 @@
 .prose {
-  a {
-    @apply green underline underline-transparent transition-colors;
-    &:hover {
-      @apply underline-green;
-    }
-  }
   p,
   h1,
   h2,
