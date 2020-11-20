@@ -5,5 +5,6 @@
 @import './_includes/theme/fonts.css';
 @import './_includes/theme/prose.css';
 @import './_includes/theme/highlight.css';
+@import './_includes/theme/docsearch.css';
 @import './_includes/theme/headers.css';
 @import './_includes/theme/colors.css';

@@ -1,0 +1,19 @@
+body {
+  .DocSearch-Button {
+    @apply w-100p h-5 py-02 pl-2 m-0 lh-1;
+    @apply gray-6 bg-white;
+    @apply border-solid border-001 border-gray-4 rounded-3;
+    @apply flex;
+    &:hover {
+      @apply border-transparent;
+    }
+  }
+  .DocSearch-Button-Placeholder {
+    @apply flex-grow text-left;
+  }
+
+  --docsearch-highlight-color: var(--docsearch-primary-color);
+  --docsearch-logo-color: rgba(84, 104, 255, 0.8);
+  --docsearch-muted-color: #969faf;
+  --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-muted-color);
+}
