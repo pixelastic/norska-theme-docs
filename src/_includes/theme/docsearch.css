@@ -12,6 +12,7 @@ body {
     @apply flex-grow text-left;
   }
 
+  --docsearch-primary-color: #48bb78;
   --docsearch-highlight-color: var(--docsearch-primary-color);
   --docsearch-logo-color: rgba(84, 104, 255, 0.8);
   --docsearch-muted-color: #969faf;
