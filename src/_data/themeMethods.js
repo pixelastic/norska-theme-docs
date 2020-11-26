@@ -53,8 +53,8 @@ module.exports = {
    * @returns {string} URL of the edit page
    */
   editUrl(dependencyInjection = {}) {
-    const { package } = dependencyInjection.data;
+    const { package: packageJson } = dependencyInjection.data;
     const { sourceFile } = dependencyInjection.url;
-    return `${package.github}/edit/master/docs/src/${sourceFile}`;
+    return `${packageJson.github}/edit/master/docs/src/${sourceFile}`;
   },
 };
