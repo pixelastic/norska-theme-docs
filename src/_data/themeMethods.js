@@ -47,14 +47,14 @@ module.exports = {
   },
   /**
    * Returns a URL pointing to the page to edit the file in the GitHub repo
-   * @param {string} here url.here of the calling page
-   * @param {object} dependencyInjection Object containing pug data. Expect at
-   * least package
+   * @param {object} dependencyInjection Object containing pug data
+   * @param {object} dependencyInjection.data Data object
+   * @param {object} dependencyInjection.url Url object
    * @returns {string} URL of the edit page
    */
-  editUrl(here, dependencyInjection = {}) {
+  editUrl(dependencyInjection = {}) {
     const { package } = dependencyInjection.data;
-    const mdFile = here.replace(/\/$/, '.md');
-    return `${package.github}/edit/master/docs/src${mdFile}`;
+    const { sourceFile } = dependencyInjection.url;
+    return `${package.github}/edit/master/docs/src/${sourceFile}`;
   },
 };
