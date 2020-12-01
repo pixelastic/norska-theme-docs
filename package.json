@@ -15,7 +15,7 @@
     "lib/*.js",
     "src/"
   ],
-  "homepage": "https://github.com/pixelastic/norska/",
+  "homepage": "https://projects.pixelastic.com/norska/",
   "license": "MIT",
   "main": "./main.js",
   "name": "norska-theme-docs",
