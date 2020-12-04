@@ -47,7 +47,7 @@ html(lang='en')
     +norska_scripts
       if data.theme.docSearch
         //- Workaround until DocSearch alpha is fixed
-        script window.process = { NODE_ENV: 'development' }
+        script window.process = { env: { NODE_ENV: 'development' } }
         script(src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha")
         script!=`window.DOCSEARCH_CONFIG = ${JSON.stringify(data.theme.docSearch)}`
         script
