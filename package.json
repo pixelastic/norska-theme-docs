@@ -29,5 +29,5 @@
     "test": "./scripts/test",
     "test:watch": "./scripts/test-watch"
   },
-  "version": "1.2.8"
+  "version": "1.2.9"
 }
