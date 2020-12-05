@@ -1,21 +1,18 @@
-.prose {
-  p,
-  div,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  li {
-    code {
-      &:before,
-      &:after {
-        @apply hidden;
-      }
-      @apply bg-gray-3 red-7 px-02 py-01 rounded no-bold;
+html .prose {
+  /* Only style code that is not in a <pre> tag */
+  > code,
+  *:not(pre) code {
+    &:before,
+    &:after {
+      @apply hidden;
     }
+    @apply bg-gray-3 red-7 px-02 py-01 rounded no-bold;
   }
+  /* Keep link color in code */
+  a code {
+    @apply current-color;
+  }
+  /* Style pre tag as multiline code */
   pre {
     @apply bg-gray-9 p-2 gray-1 lh-2;
   }
