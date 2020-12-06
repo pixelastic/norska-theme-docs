@@ -7,3 +7,18 @@
 @import './_includes/theme/highlight.css';
 @import './_includes/theme/docsearch.css';
 @import './_includes/theme/colors.css';
+
+/**
+ * This is a hack.
+ * We have a fixed left sidebar, that only takes 25% of the container width but
+ * the whole screen height (minus the header).
+ * To make it look like it also takes the left part of the screen, we add
+ * a before element that spans the whole height, with the same background color
+ **/
+@screen lg {
+  .__sidebar:before {
+    content: '';
+    right: 100%;
+    @apply absolute bg-gray-1 w-100vw bottom-0 top-0;
+  }
+}

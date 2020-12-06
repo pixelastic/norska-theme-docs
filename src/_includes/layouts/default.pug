@@ -5,46 +5,28 @@ html(lang='en')
   +norska_head
     link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@alpha")
 
-  body.bg-gray-1.lato
+  body.bg-white.lato
     input#menu_checkbox.hidden.if(type="checkbox")
     include ../theme/header.pug
-    .container.mx-auto.flex.mt-10.pb-3.px-01
-      //- Sidebar
-      .hidden.then_block.fixed.z-8.inset-0.mt-8.bg-white.lg_w-25p.lg_flex.lg_relative.lg_mt-0.lg_bg-transparent
-        .px-2.py-2
-          each part in data.theme.navigation
-            h3.DocSearch-categoryTitle.bold.gray-6.text-3=part.name
-            ul.mb-1
-              each entry in part.links
-                - const parts = data.themeMethods.parseNavigationLink(entry, { isCurrentPage, link })
-                - const cssClasses = parts.isActive ? 'DocSearch-active theme-navigation-link-active bold' : 'border-transparent hover_border-gray-4';
-                li.text-3
-                  a.theme-navigation-link.block.ml-01.my-01.pl-02.gray-7.border-l-01(href=parts.relativeLink title=parts.title class=cssClasses)=parts.title
-                  if entry.links
-                    ul.mb-1.ml-1
-                      each subEntry in entry.links
-                        - const subParts = data.themeMethods.parseNavigationLink(subEntry, { isCurrentPage, link })
-                        - const cssClasses = subParts.isActive ? 'DocSearch-active theme-navigation-link-active bold' : 'border-transparent hover_border-gray-4';
-                        li.text-2
-                          a.theme-navigation-link.block.ml-01.my-01.pl-02.gray-7.border-l-01(href=subParts.relativeLink title=subParts.title class=cssClasses)=subParts.title
-
-
+    .container.mx-auto.flex.mt-8.pb-3
+      include ../theme/sidebar.pug
       //- Content
-      .flex-grow.min-w-0
+      .flex-grow.min-w-0.px-1.py-2.md_pl-5
         if data.theme.isDefaultInstall
           .bg-red-1.border-001.border-red-9.p-3.mb-3
             .prose!=markdown(data.theme.instructions)
 
-        .DocSearch-content.bg-white.border-001.border-gray-4.p-1.md_p-3
+        .DocSearch-content
           .flow-root
             include ../theme/editLink.pug
-            h1.theme-title.gray-9.text-6.lg_text-8.border-b-01=data.meta.title
+            h1.theme-title.gray-9.text-6.md_text-7.xl_text-8.border-b-01=data.meta.title
           .prose.lg_prose-lg.xl_prose-2xl.pt-5.overflow-hidden
             block content
 
-    include ../theme/footer.pug
+        include ../theme/footer.pug
 
     +norska_scripts
+      script=include('script.js')
       if data.theme.docSearch
         //- Workaround until DocSearch alpha is fixed
         script window.process = { env: { NODE_ENV: 'development' } }
