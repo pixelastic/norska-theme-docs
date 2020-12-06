@@ -26,7 +26,6 @@ html(lang='en')
         include ../theme/footer.pug
 
     +norska_scripts
-      script=include('script.js')
       if data.theme.docSearch
         //- Workaround until DocSearch alpha is fixed
         script window.process = { env: { NODE_ENV: 'development' } }

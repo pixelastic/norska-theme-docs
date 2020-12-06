@@ -1,5 +1,7 @@
+const lazyload = require('norska/frontend/lazyload');
 module.exports = {
-  init() {
-    console.info('hello world');
+  async init() {
+    // Lazy loading of images when in viewport
+    lazyload.init();
   },
 };
