@@ -10467,9 +10467,9 @@ norska-theme-default@^1.5.2:
   resolved "https://registry.npmjs.org/norska-theme-default/-/norska-theme-default-1.5.2.tgz#b202b4f54323ed066b1644d7ef7ed85c0c74ce5a"
   integrity sha512-dNtsm6SKnVE/6llpwqKvTbS9TvnIf6dykltXjg0wIxaV3FbB1VSfav1PMnKkR+r+rKorLrS9PG0GuGm5iQ5M0g==
 
-norska@1.6.1:
+norska@latest:
   version "1.6.1"
-  resolved "https://registry.yarnpkg.com/norska/-/norska-1.6.1.tgz#3061189b22f94eeadd6284370ca0c74d10981f7c"
+  resolved "https://registry.npmjs.org/norska/-/norska-1.6.1.tgz#3061189b22f94eeadd6284370ca0c74d10981f7c"
   integrity sha512-cSIT6uXpDsQdEByPIZynxjKnhWEoK4dsKoPUWXEfnUqM3uqBVyz/hZ8nEbTjkONSZucCnNU8B3T11fe4QKWn3Q==
   dependencies:
     firost "2.2.0"
