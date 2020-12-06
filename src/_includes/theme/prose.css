@@ -1,8 +1,55 @@
-.prose {
+/**
+ * This overrides some default styling added by tailwindcss/typography to better
+ * suit the theme.
+ *
+ * All rules are scoped into `html .prose` to give them higher specificity.
+ **/
+html .prose {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    /* Prevent anchors to be hidden behind the header */
+    @apply scroll-mt-8;
+    /* Do not use the link color in a header */
+    a {
+      @apply current-color;
+    }
+  }
+
+  /* <pre> tags are used for code highlight */
+  pre {
+    @apply bg-gray-9 p-2 gray-1 lh-2;
+  }
+
+  /* Link have an underline on hover */
   a {
     @apply blue underline underline-transparent transition-colors;
     &:hover {
       @apply underline-current-color;
     }
+  }
+
+  /**
+   * <code> tags are not trivial. They should be styled when in the body of
+   * a text, but not when in a <pre> (as they will alreayd be styled by
+   * highlight). We also want to have them use the link color when in a normal
+   * link, but keep their code styling when in a header link
+   **/
+  /* Only style code that is not in a <pre> tag */
+  > code,
+  *:not(pre) code {
+    @apply bg-gray-3 red-7 px-02 py-01 rounded no-bold;
+    /* Remove backticks */
+    &:before,
+    &:after {
+      @apply hidden;
+    }
+  }
+  /* Keep link color in code, except in headers */
+  *:not(h1, h2, h3, h4, h5, h6) a code {
+    @apply current-color;
   }
 }
