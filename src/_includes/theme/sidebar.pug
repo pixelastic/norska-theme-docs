@@ -1,18 +1,17 @@
-.__sidebar.hidden.then_block.fixed.z-8.inset-0.mt-8.bg-gray-1.lg_w-15.lg_flex.lg_relative.lg_mt-0
-  .lg_fixed.lg_w-15.-h-8.lg_overflow-y-auto.lg_border-r-001.lg_border-gray-4
-    .p-2
-      each part in data.theme.navigation
-        h3.DocSearch-categoryTitle.bold.gray-6.text-3=part.name
-        ul.mb-1
-          each entry in part.links
-            - const parts = data.themeMethods.parseNavigationLink(entry, { isCurrentPage, link })
-            - const cssClasses = parts.isActive ? 'DocSearch-active theme-navigation-link-active bold' : 'border-transparent hover_border-gray-4';
-            li.text-3
-              a.theme-navigation-link.block.ml-01.my-01.pl-02.gray-7.border-l-01(href=parts.relativeLink title=parts.title class=cssClasses)=parts.title
-              if entry.links
-                ul.mb-1.ml-1
-                  each subEntry in entry.links
-                    - const subParts = data.themeMethods.parseNavigationLink(subEntry, { isCurrentPage, link })
-                    - const cssClasses = subParts.isActive ? 'DocSearch-active theme-navigation-link-active bold' : 'border-transparent hover_border-gray-4';
-                    li.text-2
-                      a.theme-navigation-link.block.ml-01.my-01.pl-02.gray-7.border-l-01(href=subParts.relativeLink title=subParts.title class=cssClasses)=subParts.title
+.__sidebar.hidden.then_block.fixed.z-8.inset-0.overflow-y-auto.mt-8.bg-gray-1.lg_w-15.lg_flex.lg_h-100p.lg_relative.lg_mt-0
+  .js-scrollable-sidebar.p-2.lg_fixed.lg_w-15.-h-8.lg_overflow-y-auto.lg_border-r-001.lg_border-gray-4
+    each part in data.theme.navigation
+      h3.DocSearch-categoryTitle.bold.gray-6.text-3=part.name
+      ul.mb-1
+        each entry in part.links
+          - const parts = data.themeMethods.parseNavigationLink(entry, { isCurrentPage, link })
+          - const cssClasses = parts.isActive ? 'DocSearch-active theme-navigation-link-active js-navigation-link-active bold' : 'border-transparent hover_border-gray-4';
+          li.text-3
+            a.theme-navigation-link.block.ml-01.my-01.pl-02.gray-7.border-l-01(href=parts.relativeLink title=parts.title class=cssClasses)=parts.title
+            if entry.links
+              ul.mb-1.ml-1
+                each subEntry in entry.links
+                  - const subParts = data.themeMethods.parseNavigationLink(subEntry, { isCurrentPage, link })
+                  - const cssClasses = subParts.isActive ? 'DocSearch-active theme-navigation-link-active bold' : 'border-transparent hover_border-gray-4';
+                  li.text-2
+                    a.theme-navigation-link.block.ml-01.my-01.pl-02.gray-7.border-l-01(href=subParts.relativeLink title=subParts.title class=cssClasses)=subParts.title

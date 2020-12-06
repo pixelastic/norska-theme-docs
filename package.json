@@ -7,7 +7,7 @@
   "devDependencies": {
     "aberlaas": "1.14.0",
     "golgoth": "2.0.0",
-    "norska": "1.6.1"
+    "norska": "latest"
   },
   "description": "Norska documentation theme",
   "files": [
