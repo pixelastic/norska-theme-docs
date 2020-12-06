@@ -18,11 +18,14 @@ module.exports = async (config) => {
     );
   }
 
+  const yarn = `https://classic.yarnpkg.com/en/package/${name}`;
+
   return {
     name,
     version,
     homepage,
     description,
     github,
+    yarn,
   };
 };
