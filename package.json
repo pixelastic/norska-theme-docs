@@ -12,7 +12,7 @@
   "description": "Norska documentation theme",
   "files": [
     "main.js",
-    "lib/*.js",
+    "tailwind.config.js",
     "src/"
   ],
   "homepage": "https://projects.pixelastic.com/norska/",
