@@ -19,7 +19,11 @@ html(lang='en')
         .DocSearch-content
           .flow-root
             include ../theme/editLink.pug
-            h1.theme-title.gray-9.text-6.md_text-7.xl_text-8.border-b-01=data.meta.title
+            //- DocSearch expect each header to have an id, otherwise it
+            //- considers #menu_checkbox to be the closest id
+            - const mainTitleId=_.kebabCase(data.meta.title)
+            a(href=url.here)
+              h1.theme-title.gray-9.text-6.md_text-7.xl_text-8.border-b-01(id=mainTitleId)=data.meta.title
           .prose.lg_prose-lg.xl_prose-2xl.pt-5.overflow-hidden
             block content
 
