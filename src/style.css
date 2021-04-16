@@ -1,6 +1,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import 'norska-frontend/style.css';
 
 @import './_includes/theme/fonts.css';
 @import './_includes/theme/prose.css';
