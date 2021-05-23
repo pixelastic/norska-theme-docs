@@ -9,6 +9,9 @@
     "golgoth": "2.0.0",
     "norska": "latest"
   },
+  "engines": {
+    "node": ">=14.17.0"
+  },
   "description": "Norska documentation theme",
   "files": [
     "main.js",
