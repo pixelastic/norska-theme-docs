@@ -1,0 +1,10 @@
+<svg fill="black" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text { 
+      dominant-baseline: middle; 
+      text-anchor: middle;
+    }
+  </style>
+  <text fill="currentColor" y="50%" x="50%" font-size="50">●</text>
+</svg>
+
