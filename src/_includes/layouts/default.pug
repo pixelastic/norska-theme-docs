@@ -1,5 +1,8 @@
 include ../theme/mixins.pug
 
+// Use the default logo as favicon by default
+- data.meta.favicon = data.meta.favicon || "assets/logo.svg"
+
 doctype html
 html(lang='en')
   +norska_head

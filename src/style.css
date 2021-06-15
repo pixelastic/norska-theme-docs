@@ -23,3 +23,14 @@
     @apply absolute bg-gray-1 w-100vw bottom-0 top-0;
   }
 }
+
+/**
+ * By default, we use the same svg file for the favicon and for the header. But
+ * we might want to color them differently.
+ * To color the favicon, we can set a custom `fill` attribute inside it, but to
+ * be able to overwrite the color of in the website, we need to force
+ * overwriting the path color
+ **/
+.fill-current path {
+  @apply fill-current;
+}

@@ -2,11 +2,7 @@
   .container.mx-auto.h-100p.flex.items-center.px-1.md_px-2
     //- Title
     .w-25p.flex.items-center
-        - const headerLogos = data.themeMethods.headerLogos({ include, _ })
-        a(href=url.pathToRoot)
-          .block.md_hidden!=headerLogos.default
-          .hidden.md_block.lg_hidden!=headerLogos.md
-          .hidden.lg_block!=headerLogos.lg
+      a(href=url.pathToRoot)!=include('_includes/logo.pug')
 
     .flex.flex-grow
       //- Search
@@ -16,7 +12,7 @@
             #DocSearchContainer
       .flex.w-25p.justify-end
         //- Menu
-        .flex.lg_hidden
+        .theme-menu.flex.lg_hidden
           label.then_hidden.px-02.py-01.gray-5.hover_gray-7.pointer(for="menu_checkbox")
             +svg_hamburger.fill-current.w-4.h-4()
           label.hidden.then_block.px-02.py-01.gray-5.hover_gray-7.pointer(for="menu_checkbox")
