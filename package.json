@@ -5,7 +5,7 @@
     "parse-github-repo-url": "1.4.1"
   },
   "devDependencies": {
-    "aberlaas": "1.23.0",
+    "aberlaas": "1.23.1",
     "golgoth": "2.0.0",
     "norska": "latest"
   },
