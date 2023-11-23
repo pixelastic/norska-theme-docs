@@ -5,12 +5,12 @@
     "parse-github-repo-url": "1.4.1"
   },
   "devDependencies": {
-    "aberlaas": "1.25.0",
+    "aberlaas": "1.26.0",
     "golgoth": "2.1.0",
     "norska": "latest"
   },
   "engines": {
-    "node": ">=14.17.0"
+    "node": ">=18"
   },
   "description": "Norska documentation theme",
   "files": [
