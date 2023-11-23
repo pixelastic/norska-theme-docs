@@ -7,7 +7,7 @@
   "devDependencies": {
     "aberlaas": "1.26.0",
     "golgoth": "2.1.0",
-    "norska": "latest"
+    "norska": "3.0.0"
   },
   "engines": {
     "node": ">=18"
